@@ -6,8 +6,12 @@
 ; plus fixed timer to run once and using global variable.
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#SingleInstance force; Performs in single instance mode.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+ICON_FILE_NAME := ".\res\disabletouchpad.ico"
+
+Menu, Tray, Icon, %ICON_FILE_NAME%,
 
 ;user configuration
 DisableTime := -500 ;in milliseconds
